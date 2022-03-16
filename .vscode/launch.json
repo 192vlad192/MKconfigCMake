@@ -1,0 +1,33 @@
+{   
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "cortex-debug",
+            "request": "launch",
+            "name": "debug (JLink)",
+            "device": "Cortex-M3",
+            "executable": "./build/testCMake.elf",  //<---------------------------
+            "svdFile": "./STM32F217.svd",           //<---------------------------
+            "servertype": "jlink",
+            "interface": "jtag",
+            "showDevDebugOutput": true,
+            "showDevDebugTimestamps": true,
+            "cwd": "${workspaceRoot}"
+        }
+        ,
+        {
+            "name": "debug (openocd)",
+            "request": "launch",
+            "type": "cortex-debug",
+            "cwd": "${workspaceRoot}",
+            "interface": "jtag",
+            "servertype": "openocd",
+            "showDevDebugOutput": true,
+            "executable": "./build/testCMake.elf",  //<---------------------------
+            "svdFile": "STM32F217.svd",             //<---------------------------
+            "configFiles": [
+                "openocd.cfg"
+            ]
+        }
+    ]
+}

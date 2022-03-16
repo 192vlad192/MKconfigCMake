@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "arm_c_cpp_properties",
+            "compilerPath": "/usr/bin/arm-none-eabi-gcc",
+            "includePath": [
+                "${workspaceRoot}/core/inc",
+                "${workspaceRoot}/core/src",
+                "${workspaceRoot}/driver/CMSIS/core",
+                "${workspaceRoot}/driver/CMSIS/inc",
+                "${workspaceRoot}/driver/CMSIS/src" 
+            ],
+            "defines": [
+                "STM32F207xx"
+            ],
+            "compilerArgs": [
+                
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+}
